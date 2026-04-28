@@ -7,38 +7,204 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#" class="brand">AICRM</a>
+      <nav class="nav">
+        <a href="#services">功能</a>
+        <a href="#process">流程</a>
+        <a href="#pricing">价格</a>
+        <a href="#testimonials">评价</a>
+        <a href="#cases">案例</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="page">
-    <section class="form-card">
-      <h1>客户信息收集</h1>
-      <p class="subtitle">请填写以下信息，我们会尽快和你联系。</p>
+    <div class="layout">
+      <section class="hero" id="features">
+        <span class="badge">SaaS Lead Capture</span>
+        <h1>AI客户收集系统</h1>
+        <p class="subtitle">自动收集客户信息，解放你的时间</p>
 
-      <form id="customerForm" novalidate>
-        <div class="form-row">
-          <label for="name">姓名 <span class="required">*</span></label>
-          <input id="name" name="name" type="text" placeholder="请输入姓名" required />
+        <div class="services" id="services">
+          <h2>核心能力矩阵</h2>
+          <div class="service-grid">
+            <article class="service-card">
+              <p class="service-name">网页爬虫</p>
+              <p class="service-desc">支持指定站点采集、定时抓取、数据清洗与结构化输出。</p>
+            </article>
+            <article class="service-card">
+              <p class="service-name">软件开发</p>
+              <p class="service-desc">提供 Web 系统、管理后台、API 服务的定制开发与迭代。</p>
+            </article>
+            <article class="service-card">
+              <p class="service-name">自动化部署</p>
+              <p class="service-desc">支持 CI/CD 流程搭建，自动构建、发布、回滚与告警通知。</p>
+            </article>
+            <article class="service-card">
+              <p class="service-name">流程自动化</p>
+              <p class="service-desc">将表单、审批、通知和客户跟进流程自动串联，减少人工重复工作。</p>
+            </article>
+          </div>
         </div>
 
-        <div class="form-row">
-          <label for="phone">电话 <span class="required">*</span></label>
-          <input id="phone" name="phone" type="tel" placeholder="请输入电话" required />
+        <div class="logo-wall">
+          <p class="logo-title">超过 120+ 团队正在使用</p>
+          <div class="logo-grid">
+            <span>NovaEdu</span>
+            <span>LinkHome</span>
+            <span>BlueFit</span>
+            <span>CloudDent</span>
+          </div>
         </div>
 
-        <div class="form-row">
-          <label for="wechat">微信</label>
-          <input id="wechat" name="wechat" type="text" placeholder="选填：请输入微信号" />
+        <div class="cases" id="cases">
+          <h2>成功案例</h2>
+          <article class="case-item">
+            <p class="case-title">某教育机构</p>
+            <p class="case-desc">接入 30 天后，线索收集效率提升 62%，人工登记时间减少 80%。</p>
+          </article>
+          <article class="case-item">
+            <p class="case-title">某本地服务商</p>
+            <p class="case-desc">通过自动分发客户需求，平均响应时间从 2 小时缩短到 15 分钟。</p>
+          </article>
         </div>
+      </section>
 
-        <div class="form-row">
-          <label for="demand">需求描述 <span class="required">*</span></label>
-          <textarea id="demand" name="demand" placeholder="请描述你的需求" required></textarea>
-        </div>
+      <section class="form-card">
+        <h2 class="form-title">立即提交客户信息</h2>
+        <p class="form-intro">请填写真实联系方式，我们会在 15 分钟内联系你确认方案。</p>
 
-        <button id="submitBtn" type="submit">提交信息</button>
-      </form>
+        <form id="customerForm" novalidate>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="name">姓名 <span class="required">*</span></label>
+              <input id="name" name="name" type="text" placeholder="请输入姓名" autocomplete="name" required />
+            </div>
 
-      <p id="feedback" class="feedback" aria-live="polite"></p>
+            <div class="form-row">
+              <label for="phone">电话 <span class="required">*</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="请输入电话" autocomplete="tel" inputmode="numeric" required />
+              <p id="phoneError" class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="wechat">微信</label>
+            <input id="wechat" name="wechat" type="text" placeholder="选填：请输入微信号" autocomplete="off" />
+          </div>
+
+          <div class="form-row">
+            <label for="demand">需求描述 <span class="required">*</span></label>
+            <textarea id="demand" name="demand" placeholder="请描述你的需求，例如：网页爬虫 / 软件开发 / 自动化部署" required></textarea>
+            <p class="field-note">建议写清目标、预算和期望上线时间，便于我们快速报价。</p>
+          </div>
+
+          <button id="submitBtn" type="submit">立即提交</button>
+        </form>
+
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <a class="consult-btn" href="#contact">免费咨询（30分钟）</a>
+        <p class="contact-tip" id="contact">需要人工协助？联系客服微信：<strong>AI-HELP-001</strong></p>
+      </section>
+    </div>
+
+    <section class="process" id="process">
+      <h2>服务流程</h2>
+      <div class="process-grid">
+        <article class="process-item">
+          <span class="step">01</span>
+          <h3>需求沟通</h3>
+          <p>明确业务目标、数据来源、交付时间和预算范围，1v1 梳理场景。</p>
+        </article>
+        <article class="process-item">
+          <span class="step">02</span>
+          <h3>方案评估</h3>
+          <p>输出技术方案与排期建议，确认爬虫、开发和部署的执行路径。</p>
+        </article>
+        <article class="process-item">
+          <span class="step">03</span>
+          <h3>开发上线</h3>
+          <p>按里程碑交付，完成测试、自动化部署与上线监控，支持持续迭代。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2>报价套餐</h2>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <p class="plan-name">标准版</p>
+          <p class="plan-price">¥3,999<span>/项目起</span></p>
+          <ul class="plan-list">
+            <li>基础表单系统搭建</li>
+            <li>Email 通知与数据收集</li>
+            <li>1 次上线部署</li>
+          </ul>
+        </article>
+        <article class="price-card featured">
+          <p class="plan-tag">推荐</p>
+          <p class="plan-name">专业版</p>
+          <p class="plan-price">¥9,999<span>/项目起</span></p>
+          <ul class="plan-list">
+            <li>网页爬虫 + 业务系统开发</li>
+            <li>自动化部署与告警</li>
+            <li>30 天技术支持与优化</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h2>客户评价</h2>
+      <div class="testimonial-grid" id="testimonialTrack">
+        <article class="testimonial-item active">
+          <p class="testimonial-text">"以前线索都靠人工记录，经常遗漏。接入后，客户信息自动入库，团队效率明显提升。"</p>
+          <p class="testimonial-author">- 王经理，教育行业</p>
+        </article>
+        <article class="testimonial-item">
+          <p class="testimonial-text">"从需求提交到技术响应速度很快，自动化部署上线后，我们运维压力小了很多。"</p>
+          <p class="testimonial-author">- 陈总，本地生活服务</p>
+        </article>
+        <article class="testimonial-item">
+          <p class="testimonial-text">"网页爬虫和 CRM 对接打通后，业务数据更完整，销售跟进转化率提升明显。"</p>
+          <p class="testimonial-author">- 刘主管，B2B 团队</p>
+        </article>
+      </div>
+      <div class="testimonial-controls">
+        <button type="button" id="prevTestimonial" class="mini-btn" aria-label="上一条评价">上一条</button>
+        <button type="button" id="nextTestimonial" class="mini-btn" aria-label="下一条评价">下一条</button>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>常见问题</h2>
+      <details>
+        <summary>提交后多久能收到邮件？</summary>
+        <p>通常 5-20 秒内即可收到。若超时，请检查垃圾邮箱和 EmailJS 配置。</p>
+      </details>
+      <details>
+        <summary>是否支持中文内容提交？</summary>
+        <p>支持，姓名、微信、需求描述都可使用中文，不影响发送。</p>
+      </details>
+      <details>
+        <summary>能否对接企业微信或 CRM？</summary>
+        <p>可以，后续可通过 Webhook 或 API 把线索自动同步到你的业务系统。</p>
+      </details>
     </section>
   </main>
+
+  <a class="floating-contact" href="#contact" aria-label="联系客服">联系客服</a>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 AICRM Tech. All rights reserved.</p>
+      <p>粤ICP备12345678号-1 | 企业服务与自动化解决方案</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="./script.js"></script>
